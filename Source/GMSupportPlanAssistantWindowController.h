@@ -23,7 +23,7 @@ typedef enum : NSUInteger {
 
 @protocol GMSupportPlanAssistantDelegate <NSObject>
 
-- (void)supportPlanAssistant:(NSWindowController *)windowController email:(NSString *)email activationCode:(NSString *)activationCode;
+//- (void)supportPlanAssistant:(NSWindowController *)windowController email:(NSString *)email activationCode:(NSString *)activationCode;
 - (void)supportPlanAssistantDidClose:(NSWindowController *)windowController;
 - (void)closeSupportPlanAssistant:(NSWindowController *)windowController;
 - (void)supportPlanAssistantShouldStartTrial:(NSWindowController *)windowController;
@@ -31,22 +31,22 @@ typedef enum : NSUInteger {
 
 @end
 
-@interface GMSupportPlanAssistantWindowController : NSWindowController
-@property (nonatomic, weak) id<GMSupportPlanAssistantDelegate> delegate;
-@property (nonatomic, copy) NSDictionary *supportPlanInformation;
-- (void)showActivationError;
-- (void)activationDidCompleteWithSuccess;
-- (void)activationDidFailWithError:(NSError *)error;
-- (instancetype)initWithSupportPlanActivationInformation:(NSDictionary *)supportPlanInformation;
-
-@end
-
-@interface GMSupportPlanAssistantViewController : NSViewController
-@property (weak) id<GMSupportPlanAssistantDelegate> delegate;
-@property (nonatomic) GMSupportPlanAssistantViewControllerState state;
-
-@property (nonatomic) NSString *email;
-@property (nonatomic) NSString *activationCode;
-
-@end
+//@interface GMSupportPlanAssistantWindowController : NSWindowController
+//@property (nonatomic, weak) id<GMSupportPlanAssistantDelegate> delegate;
+//@property (nonatomic, copy) NSDictionary *supportPlanInformation;
+//- (void)showActivationError;
+//- (void)activationDidCompleteWithSuccess;
+//- (void)activationDidFailWithError:(NSError *)error;
+//- (instancetype)initWithSupportPlanActivationInformation:(NSDictionary *)supportPlanInformation;
+//
+//@end
+//
+//@interface GMSupportPlanAssistantViewController : NSViewController
+//@property (weak) id<GMSupportPlanAssistantDelegate> delegate;
+//@property (nonatomic) GMSupportPlanAssistantViewControllerState state;
+//
+//@property (nonatomic) NSString *email;
+//@property (nonatomic) NSString *activationCode;
+//
+//@end
 

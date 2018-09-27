@@ -850,58 +850,58 @@ static BOOL gpgMailWorks = NO;
 }
 
 - (BOOL)hasActiveContract {
-    NSDictionary *contractInformation = [self contractInformation];
-    return [contractInformation[@"Active"] boolValue];
+    //NSDictionary *contractInformation = [self contractInformation];
+    return YES; //[contractInformation[@"Active"] boolValue];
 }
 
 - (NSNumber *)remainingTrialDays {
-    NSDictionary *contractInformation = [self contractInformation];
-    if(!contractInformation[@"ActivationRemainingTrialDays"]) {
+    //NSDictionary *contractInformation = [self contractInformation];
+    //if(!contractInformation[@"ActivationRemainingTrialDays"]) {
         return @(30);
-    }
-    return contractInformation[@"ActivationRemainingTrialDays"];
+    //}
+    //return contractInformation[@"ActivationRemainingTrialDays"];
 }
 
 - (void)startSupportContractWizard {
-    GMSupportPlanAssistantViewController *supportPlanAssistantViewController = [[GMSupportPlanAssistantViewController alloc] initWithNibName:@"GMSupportPlanAssistantView" bundle:[GPGMailBundle bundle]];
-    supportPlanAssistantViewController.delegate = self;
-    
-    GMSupportPlanAssistantWindowController *supportPlanAssistantWindowController = [[GMSupportPlanAssistantWindowController alloc] initWithSupportPlanActivationInformation:[self contractInformation]];
-    supportPlanAssistantWindowController.delegate = self;
-    supportPlanAssistantWindowController.contentViewController = supportPlanAssistantViewController;
-    
-    [[[NSApplication sharedApplication] windows][0] beginSheet:[supportPlanAssistantWindowController window]
-                                              completionHandler:^(NSModalResponse returnCode) {}];
-
-    [self setIvar:@"Window" value:supportPlanAssistantWindowController];
-    [self setIvar:@"View" value:supportPlanAssistantViewController];
+//    GMSupportPlanAssistantViewController *supportPlanAssistantViewController = [[GMSupportPlanAssistantViewController alloc] initWithNibName:@"GMSupportPlanAssistantView" bundle:[GPGMailBundle bundle]];
+//    supportPlanAssistantViewController.delegate = self;
+//
+//    GMSupportPlanAssistantWindowController *supportPlanAssistantWindowController = [[GMSupportPlanAssistantWindowController alloc] initWithSupportPlanActivationInformation:[self contractInformation]];
+//    supportPlanAssistantWindowController.delegate = self;
+//    supportPlanAssistantWindowController.contentViewController = supportPlanAssistantViewController;
+//
+//    [[[NSApplication sharedApplication] windows][0] beginSheet:[supportPlanAssistantWindowController window]
+//                                              completionHandler:^(NSModalResponse returnCode) {}];
+//
+//    [self setIvar:@"Window" value:supportPlanAssistantWindowController];
+//    [self setIvar:@"View" value:supportPlanAssistantViewController];
 }
 
 - (void)checkSupportContractAndStartWizardIfNecessary {
-    if(![self hasActiveContract]) {
-        [self startSupportContractWizard];
-    }
+//    if(![self hasActiveContract]) {
+//        //[self startSupportContractWizard];
+//    }
 }
              
 #pragma mark -
 
 - (void)supportPlanAssistant:(NSWindowController *)windowController email:(NSString *)email activationCode:(NSString *)activationCode {
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
-        GPGTaskHelperXPC *xpc = [[GPGTaskHelperXPC alloc] init];
-        NSError __autoreleasing *error = nil;
-        BOOL isActivated = [xpc activateSupportContractWithEmail:email activationCode:activationCode error:&error];
-        NSError *finalError = error;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if(isActivated) {
-                [(GMSupportPlanAssistantWindowController *)windowController activationDidCompleteWithSuccess];
-                NSMutableDictionary *activationInfo = [NSMutableDictionary dictionaryWithDictionary:_activationInfo];
-                [activationInfo setObject:@(YES) forKey:@"Active"];
-                _activationInfo = (NSDictionary *)activationInfo;
-            }
-            else {
-                [(GMSupportPlanAssistantWindowController *)windowController activationDidFailWithError:finalError];
-            }
-        });
+//        GPGTaskHelperXPC *xpc = [[GPGTaskHelperXPC alloc] init];
+//        NSError __autoreleasing *error = nil;
+        BOOL isActivated = YES;//[xpc activateSupportContractWithEmail:email activationCode:activationCode error:&error];
+        //NSError *finalError = error;
+        //dispatch_async(dispatch_get_main_queue(), ^{
+           // if(isActivated) {
+//                [(GMSupportPlanAssistantWindowController *)windowController activationDidCompleteWithSuccess];
+//                NSMutableDictionary *activationInfo = [NSMutableDictionary dictionaryWithDictionary:_activationInfo];
+//                [activationInfo setObject:@(YES) forKey:@"Active"];
+//                _activationInfo = (NSDictionary *)activationInfo;
+            //}
+            //else {
+            //    [(GMSupportPlanAssistantWindowController *)windowController activationDidFailWithError:finalError];
+            //}
+        //});
     });
 }
 
