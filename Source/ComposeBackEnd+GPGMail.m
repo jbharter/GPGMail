@@ -469,19 +469,19 @@ NSString * const kLibraryMimeBodyReturnCompleteBodyDataForComposeBackendKey = @"
     }
     
     // Remove all whitespaces at the end of lines. But don't kill attachments.
-    RKRegex *regex = [RKRegex regexWithRegexString:@"[\\t\\f\\r\\p{Z}]+$" options:RKCompileMultiline];
-    RKEnumerator *rkEnum = [plainString matchEnumeratorWithRegex:regex];
+    //RKRegex *regex = [RKRegex regexWithRegexString:@"[\\t\\f\\r\\p{Z}]+$" options:RKCompileMultiline];
+    //RKEnumerator *rkEnum = [plainString matchEnumeratorWithRegex:regex];
     
-    NSMutableArray *ranges = [NSMutableArray array];
+    //NSMutableArray *ranges = [NSMutableArray array];
     
     // Get all matches and reverse the order.
-    for (NSArray *match in rkEnum) {
-        [ranges insertObject:match[0] atIndex:0];
-    }
+//    for (NSArray *match in rkEnum) {
+//        [ranges insertObject:match[0] atIndex:0];
+//    }
     // Removed matched characters.
-    for (NSValue *range in ranges) {
-        [plainString replaceCharactersInRange:range.rangeValue withString:@""];
-    }
+//    for (NSValue *range in ranges) {
+//        [plainString replaceCharactersInRange:range.rangeValue withString:@""];
+//    }
     
     // TODO: Fix and verify that the data is really transformed.
     return plainText;
