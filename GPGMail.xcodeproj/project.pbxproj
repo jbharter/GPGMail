@@ -81,7 +81,6 @@
 		1BC35B7A20C4D01B00D8511D /* GMMessageProtectionStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC35B7920C4D01B00D8511D /* GMMessageProtectionStatus.m */; };
 		1BC4778D1468AA4F0061120C /* GPGAttachmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC4778C1468AA4F0061120C /* GPGAttachmentController.m */; };
 		1BD06B9B18102CF300EC9902 /* WebDocumentGenerator+GPGMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+GPGMail.m */; };
-		1BD5D34721536F6800EA4492 /* GMSupportPlanAssistantWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD5D34621536F6800EA4492 /* GMSupportPlanAssistantWindowController.m */; };
 		1BD5D34C2153700400EA4492 /* DSClickableURLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD5D3482153700300EA4492 /* DSClickableURLTextField.m */; };
 		1BD5D34D2153700400EA4492 /* NSAttributedString+LOKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD5D34B2153700300EA4492 /* NSAttributedString+LOKit.m */; };
 		1BD5D34F2153778A00EA4492 /* GMSupportPlanAssistantWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BD5D34E215372A200EA4492 /* GMSupportPlanAssistantWindow.xib */; };
@@ -1740,8 +1739,6 @@
 		1BD06B9918102CF300EC9902 /* WebDocumentGenerator+GPGMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebDocumentGenerator+GPGMail.h"; sourceTree = "<group>"; };
 		1BD06B9A18102CF300EC9902 /* WebDocumentGenerator+GPGMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WebDocumentGenerator+GPGMail.m"; sourceTree = "<group>"; };
 		1BD5D33F21536EBB00EA4492 /* GMSupportPlanAssistantView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GMSupportPlanAssistantView.xib; sourceTree = "<group>"; };
-		1BD5D34521536F6800EA4492 /* GMSupportPlanAssistantWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMSupportPlanAssistantWindowController.h; sourceTree = "<group>"; };
-		1BD5D34621536F6800EA4492 /* GMSupportPlanAssistantWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMSupportPlanAssistantWindowController.m; sourceTree = "<group>"; };
 		1BD5D3482153700300EA4492 /* DSClickableURLTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSClickableURLTextField.m; sourceTree = "<group>"; };
 		1BD5D3492153700300EA4492 /* NSAttributedString+LOKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+LOKit.h"; sourceTree = "<group>"; };
 		1BD5D34A2153700300EA4492 /* DSClickableURLTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSClickableURLTextField.h; sourceTree = "<group>"; };
@@ -3670,8 +3667,6 @@
 				1B89E21514FC40F00012D4AD /* NSWindow+GPGMail.m */,
 				306E8A36178B0BCB004C5B89 /* OptionalView+GPGMail.m */,
 				1B22762F1E7F16C100E09464 /* RedundantContentIdentificationManager+GPGMail.m */,
-				1BD5D34521536F6800EA4492 /* GMSupportPlanAssistantWindowController.h */,
-				1BD5D34621536F6800EA4492 /* GMSupportPlanAssistantWindowController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -4231,7 +4226,6 @@
 				1BAEF64413E9F57700A59CED /* MailAccount+GPGMail.m in Sources */,
 				1B02D70813F1E9D80032CFD1 /* GPGFlaggedString.m in Sources */,
 				1B02D70A13F1E9F00032CFD1 /* NSArray+Functional.m in Sources */,
-				1BD5D34721536F6800EA4492 /* GMSupportPlanAssistantWindowController.m in Sources */,
 				1B432CE51E44D9F3002C8C46 /* FullScreenWindowController+GPGMail.m in Sources */,
 				1B8289FB13FD62880007E6A2 /* Message+GPGMail.m in Sources */,
 				1B8437661404AB9C00968293 /* NSData+GPGMail.m in Sources */,

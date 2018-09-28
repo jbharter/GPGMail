@@ -30,7 +30,7 @@
 
 #import <CoreFoundation/CoreFoundation.h>
 #import <Libmacgpg/Libmacgpg.h>
-#import "GMSupportPlanAssistantWindowController.h"
+//#import "GMSupportPlanAssistantWindowController.h"
 
 #if !__has_feature(nullability)
 #define nullable
@@ -44,7 +44,7 @@ extern NSString *gpgErrorIdentifier; // This identifier is used to set and find 
 
 @class Message, GMMessageRulesApplier, GMKeyManager;
 
-@interface GPGMailBundle : NSObject <NSToolbarDelegate, GMSupportPlanAssistantDelegate> {
+@interface GPGMailBundle : NSObject <NSToolbarDelegate> {
     GMMessageRulesApplier *_messageRulesApplier;
     
     NSMutableArray *_bundleImages;
