@@ -52,7 +52,7 @@ Copy Libmacgpg.framework to user library frameworks, and the GPG.mailbundle to t
 
 ```bash
 cp -r Dependencies/Libmacgpg/build/Release/Libmacgpg.framework ~/Library/Frameworks
-cp -r build/Releases/GPGMail.mailbundle ~/Library/Mail/Bundles
+cp -r build/Release/GPGMail.mailbundle ~/Library/Mail/Bundles
 ```
 
 
