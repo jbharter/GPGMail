@@ -21,38 +21,27 @@ You can either
   - build your own version 
   - use one from [homebrew](http://brew.sh) 
   - find a packaged version for OS X at [gpgtools.org](https://gpgtools.org)
-
+  - Libmacgpg (https://github.com/GPGTools/Libmacgpg.git)
 To build this software, you need to have the full version of Xcode installed.
 
 Build
 -----
 
-#### Clone the repository & Grab Dependencies
-
-In order to communicate with GnuPG we use the GPGTools Objective-C framework called [Libmacgpg](https://github.com/GPGTools/Libmacgpg).
-It's necessary to clone the Libmacgpg repository first, before building OpenGPGMail.
+#### Clone and make
 
 ```bash
-cd Dependencies
-git clone https://github.com/GPGTools/Libmacgpg.git
-
-# Go ahead and make it too
-cd Libmacgpg
-make
-cd ../../
-```
-
-#### Build
-```bash
+git clone https://github.com/jbharter/OpenGPGMail.git
+cd OpenGPGMail
 make
 ```
 
 #### Install
-Copy Libmacgpg.framework to user library frameworks, and the GPG.mailbundle to the user library mail bundles
+Copy GPGMail.mailbundle to the user library mail bundles
 
 ```bash
-cp -r Dependencies/Libmacgpg/build/Release/Libmacgpg.framework ~/Library/Frameworks
-cp -r build/Release/GPGMail.mailbundle ~/Library/Mail/Bundles
+killall Mail
+rm -rf ~/Library/Mail/Bundles/GPGMail.mailbundle
+cp build/Release/GPGMail.mailbundle ~/Library/Mail/Bundles/GPGMail.mailbundle
 ```
 
 
